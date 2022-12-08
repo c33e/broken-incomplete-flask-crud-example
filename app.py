@@ -13,7 +13,7 @@ CORS(app)
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'HelloWorld'
 app.config['MYSQL_DB'] = 'student'
-app.config['MYSQL_HOST'] = '35.197.236.234'
+app.config['MYSQL_HOST'] = '34.135.49.97'
 mysql.init_app(app)
 
 
