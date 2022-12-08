@@ -5,5 +5,5 @@ RUN apt update && apt -y install libmysqlclient-dev
 RUN apt -y install python3-pip
 RUN pip3 install -r requirements.txt
 COPY . /app
-ENTRYPOINT [ "python3" ]
+ENTRYPOINT [ "python" ]
 CMD ["main.py"]
