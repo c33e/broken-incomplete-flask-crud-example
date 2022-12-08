@@ -24,10 +24,8 @@ def insert(cursor, name, email):
     try:
         cursor.execute(string)
         mysql.connection.commit()
-        print("YUPPPP")
         return "<h1>Success adding user to database</h1>"
     except Exception as e:
-        print("NOOOOO")
         print(e)
         return "<h1>Failed to add user to database.</h1>"
 
@@ -43,9 +41,9 @@ def read(cursor):
         Result['Name'] = row[0].replace('\n', ' ')
         Result['Email'] = row[1]
         Result['ID'] = row[2]
-        html = html + (f"<tr style='border: 1px solid blue'><th  style='border: 1px solid blue'>{Result['Name']}</th> <th style='border: 1px solid blue'>{Result['Email']}</th></tr> <br>")
+        html = html + (f"<tr style='border: 1px solid hotpink'><th  style='border: 1px solid hotpink'>{Result['Name']}</th> <th style='border: 1px solid hotpink'>{Result['Email']}</th></tr> <br>")
 
-    html = f"<table style='border: 1px solid blue'><tr style='border: 1px solid blue'><th  style='border: 1px solid blue'>Name</th><th style='border: 1px solid blue'>Email</th></tr>{html}</table>"
+    html = f"<table style='border: 1px solid hotpink'><tr style='border: 1px solid hotpink'><th  style='border: 1px solid hotpink'>Name</th><th style='border: 1px solid hotpink'>Email</th></tr>{html}</table>"
     # response = {'Results': Results, 'count': len(Results)}
     # ret = app.response_class(
     #     response=json.dumps(response),
@@ -70,13 +68,10 @@ def delete(cursor,name):
         print(str)
         cursor.execute(str)
         mysql.connection.commit()
-        print("YUPPPP")
         return "<h1>Success deleted user in database</h1>"
 
 
     except Exception as e:
-
-        print("NOOOOO")
 
         print(e)
 
